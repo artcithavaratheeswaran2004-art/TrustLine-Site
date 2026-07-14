@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO 27001 - TrustLine</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/ISO27001.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Trust<span>Line</span></div>
+  <i class="fa-solid fa-bars" id="menu-icon"></i>
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Learning.html">Learning</a></li>
+      <li><a href="ISO27001.html" class="active">ISO 27001</a></li>
+      <li><a href="Quick tips.html">Quick Tips</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="iso-hero">
+  <div class="hero-eyebrow">GRC ~ Governance, Risk and Compliance</div>
+  <h1 class="iso-title">ISO 27001 for SMEs</h1>
+  <p class="iso-intro">
+ISO 27001 is widely referenced in security yet the official documentation can be difficult to navigate, especially for small businesses without dedicated security teams. This page aims to simplify the main controls into practical steps that are easier to understand and apply.  </p>
+</section>
+
+<section class="controls-section" id="controls">
+  <div class="controls-header">
+    <h2>Core Controls</h2>
+    <div class="header-right">
+      <div class="review-tracker">
+        <span id="reviewCount">0 of 6 controls reviewed</span>
+      </div>
+      <div class="filter-tabs" role="group" aria-label="Filter by category">
+        <button class="f-btn active" data-filter="all">All</button>
+        <button class="f-btn" data-filter="people">People</button>
+        <button class="f-btn" data-filter="tech">Technology</button>
+        <button class="f-btn" data-filter="process">Process</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="review-message" id="reviewMessage"></p>
+
+  <div class="controls-grid" id="isoGrid">
+
+    <article class="iso-card" data-category="tech">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">Technology</span>
+          <h3>Access Control</h3>
+        </div>
+      </div>
+      <p>Making sure only the right people can get to the right systems. Auditors check this almost every time and it's probably the most commonly misconfigured thing in practice.</p>
+      <ul>
+        <li>Try to enable multi-factor authentication where possible especially for important accounts</li>
+        <li>Give people access based on what they actually need for their role</li>
+        <li>Remove access as soon as someone leaves or moves to a different role</li>
+        <li>Have a clear password policy and make sure people actually understand it</li>
+      </ul>
+    </article>
+
+    <article class="iso-card" data-category="tech">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-laptop" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">Technology</span>
+          <h3>Asset Management</h3>
+        </div>
+      </div>
+      <p>You can’t really protect what you don’t know exists. That’s why asset management matters. Even something simple like a basic spreadsheet is a good place to start. A lot of smaller organisations rely on that and it works fine at the beginning.</p>
+      <ul>
+        <li>Keep a clear list of all devices including laptops, phones and servers</li>
+        <li>Use simple labels like Public, Internal and Confidential to organise information</li>
+        <li>Make sure each asset has an owner so responsibility is clear</li>
+        <li>Don’t forget things like USB sticks and external drives as they often get overlooked</li>
+      </ul>
+    </article>
+
+    <article class="iso-card" data-category="process">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">Process</span>
+          <h3>Risk Assessment</h3>
+        </div>
+      </div>
+      <p>It sounds more formal than it needs to be. For most small businesses it's basically just asking: what could go wrong, how likely is it, and what would we actually do about it.</p>
+      <ul>
+        <li>A simple likelihood vs impact grid is a good enough starting point</li>
+        <li>Focus on the obvious stuff first such as phishing, ransomware, accidental data loss</li>
+        <li>For each risk, decide if you're reducing it, transferring it (e.g. insurance), or just accepting it</li>
+        <li>Revisit it at least once a year or whenever something significant changes</li>
+      </ul>
+    </article>
+
+    <article class="iso-card" data-category="people">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">People</span>
+          <h3>Awareness and Training</h3>
+        </div>
+      </div>
+      <p>Most security incidents come down to simple human mistakes. People don’t always realise they’ve done something wrong. That’s why training matters. It helps build awareness and it doesn’t need to be long or expensive to be effective.</p>
+      <ul>
+        <li>Annual security training for the whole team, not just IT staff</li>
+        <li>Phishing simulations are useful for seeing how people actually respond</li>
+        <li>Make it easy to report something suspicious, people shouldn't feel embarrassed for flagging things</li>
+        <li>Keep policies short, nobody reads a ten-page document</li>
+      </ul>
+    </article>
+
+    <article class="iso-card" data-category="process">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">Process</span>
+          <h3>Incident Management</h3>
+        </div>
+      </div>
+      <p>When something goes wrong you want the team to already have a rough plan, rather than working out who to call while it's actually happening.</p>
+      <ul>
+        <li>Even a short written plan is fine as long as it's clear about who does what</li>
+        <li>Staff should be able to raise an incident without needing to find a manager first</li>
+        <li>Log everything including near-misses, patterns tend to show up over time</li>
+        <li>Do a short debrief after any incident while it's still fresh</li>
+        <li>If you hold personal data, know your GDPR reporting obligations before anything happens</li>
+      </ul>
+    </article>
+
+    <article class="iso-card" data-category="tech">
+      <button class="tick-btn" onclick="toggleDone(this)" title="Mark as done">
+        <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+      </button>
+      <div class="card-head">
+        <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i></div>
+        <div>
+          <span class="card-tag">Technology</span>
+          <h3>Backups and Continuity</h3>
+        </div>
+      </div>
+      <p>Having backups isn't enough if you've never tested whether they actually restore properly. A lot of organisations find this out the hard way, which isn't a great situation to be in.</p>
+      <ul>
+        <li>Automate backups for anything critical, don't rely on people remembering</li>
+        <li>Test a restore every now and then, assuming it works isn't the same as knowing it does</li>
+        <li>Keep at least one copy offsite or in a separate cloud account with its own access</li>
+        <li>Think about what would happen if your core systems went down for a day</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<section class="bottom-cta" id="quiz-link">
+  <div class="quiz-prompt">
+    <p>Read through the controls? See how much has actually sunk in.</p>
+    <a href="ISO27001 Quiz.html" class="quiz-btn">Take the ISO 27001 Quiz</a>
+  </div>
+</section>
+
+<aside class="disclaimer">
+  <p>This site is intended to build awareness and understanding of cyber security topics. Content is reviewed where possible but some details may become outdated. It is not a substitute for professional advice. If something is business-critical, verify it with a qualified source.</p>
+</aside>
+
+<footer>
+  <p>© 2026 <span>TrustLine</span>. All rights reserved.</p>
+</footer>
+
+<div id="chat-window">
+  <div id="chat-header">
+    TrustLine Assistant
+    <span onclick="toggleChat()">✕</span>
+  </div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="handleKey(event)">
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<script src="js/chat.js"></script>
+<script src="js/main_for_js_folder.js"></script>
+<script src="js/ISO27001.js"></script>
+
+</body>
+</html>

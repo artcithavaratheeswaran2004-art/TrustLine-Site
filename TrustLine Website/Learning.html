@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning - TrustLine</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/Learning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.69/build/spline-viewer.js"></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">Trust<span>Line</span></div>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Learning.html" class="active">Learning</a></li>
+            <li><a href="Cyber Awareness.html">Cyber Awareness</a></li>
+            <li><a href="Quick tips.html">Quick Tips</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+
+    <div class="learn-hero">
+        <div class="hero-text">
+            <div class="eyebrow">Learn with TrustLine</div>
+            <h1>Your security learning hub.</h1>
+            <p>Choose a topic below or click “Start Learning” to follow a structured path. We’ll guide you to the most relevant content for your organisation.</p>
+            <button class="start-btn" onclick="openSizePopup()">
+                Start Learning <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="spline-box">
+            <spline-viewer url="https://prod.spline.design/OYn17EojDVDtvkex/scene.splinecode"> </spline-viewer>
+        </div>
+    </div>
+
+    <div class="modules-wrap">
+        <p class="section-label">What would you like to explore</p>
+
+        <div class="dir-grid">
+
+            <a href="Cyber Awareness.html" class="dir-card">
+                <h3>Everyday Security Essentials</h3>
+                <p>Phishing, passwords and public Wi-Fi. The essentials every staff member should know.</p>
+                <span class="dir-arrow">Go to module <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="ISO27001.html" class="dir-card">
+                <h3>ISO 27001</h3>
+                <p>Core controls explained simply. Access control, risk assessment, backups and more.</p>
+                <span class="dir-arrow">Go to module <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="Policies.html" class="dir-card">
+                <h3>Policies</h3>
+                <p>Information security, acceptable use, data protection and incident response.</p>
+                <span class="dir-arrow">Go to module <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <a href="Quick tips.html" class="dir-card">
+                <h3>Quick Tips</h3>
+                <p>Short practical tips and a password strength checker you can try right now.</p>
+                <span class="dir-arrow">Go to module <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 <span>TrustLine</span>. All rights reserved.</p>
+</footer>
+
+<div id="chat-window">
+    <div id="chat-header">
+        TrustLine Assistant
+        <span onclick="toggleChat()">✕</span>
+    </div>
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="handleKey(event)">
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<script src="js/chat.js"></script>
+<script src="js/main_for_js_folder.js"></script>
+<script src="js/Learning.js"></script>
+
+</body>
+</html>

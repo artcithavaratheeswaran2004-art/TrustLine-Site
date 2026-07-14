@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Awareness - TrustLine</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/Cyber Awareness.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Trust<span>Line</span></div>
+  <i class="fa-solid fa-bars" id="menu-icon"></i>
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Learning.html">Learning</a></li>
+      <li><a href="ISO27001.html">ISO 27001</a></li>
+      <li><a href="Quick tips.html">Quick Tips</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="awareness-hero">
+  <p class="hero-label">Cyber Awareness</p>
+  <h1>Security habits that actually stick</h1>
+  <p>Security does not have to be complicated. Small habits used every day at work and in daily life can make a big difference in keeping you and your team safe online. Start simple, stay consistent and you will build stronger protection over time.
+</p>
+  <a href="#tips" class="hero-cta-btn">View Tips <i class="fa-solid fa-arrow-down"></i></a>
+</section>
+
+<main class="tips-main" id="tips">
+
+  <div class="tips-grid">
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h3>Think Before You Click</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Got an email that feels a bit off? Trust that instinct and take a second look before you click anything <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Check the full sender address, not just the display name, since it's easy to spoof what shows up there <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Watch out for urgency. Phrases like "act now" or "your account will be closed" are classic pressure tactics <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Not sure if it's legit? Ask a colleague or flag it to IT rather than guessing. Better safe than sorry <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-lock"></i></div>
+        <h3>Better Password Habits</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Three random words strung together, like TigerGlassMountain makes a password that's both strong and actually memorable <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Reusing passwords is one of the riskiest habits around. One breach can quickly cascade into several <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Steer clear of names, birthdays or anything someone could find on your social profiles <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>A password manager handles the hard part for you. Worth setting up if you haven't already <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Strengthening Account Security with MFA</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Turn on MFA for every account that supports it, especially email and anything work-related <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Even if someone gets hold of your password, MFA usually stops them cold <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Getting a login code you didn't ask for? That's a sign someone's trying to get in, so don't approve it <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Keeping Systems Up to Date</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Yes, updates are disruptive, but they're often patching real security holes that attackers already know about <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Don't keep snoozing them, especially on work devices <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Keeping your browser and apps current is one of the simplest wins available to you, and it works <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-wifi"></i></div>
+        <h3>Using Public Wi-Fi Safely</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Public Wi-Fi is convenient but that coffee shop network isn't something you should fully trust <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Avoid logging into work systems or anything sensitive while connected to it <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>If you work remotely often, your company should have a VPN so use it <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Lock Your Screen</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Stepping away from your desk? Lock your screen first. Windows key + L on Windows, or Command + Control + Q on Mac <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>It takes one second and stops anyone walking past from seeing or touching what's open <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Matters even more in open offices or shared spaces where you don't know everyone around you <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-folder-open"></i></div>
+        <h3>Handle Data with Care</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Share files with the people who actually need them, not a wider group just to cover all bases <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Before hitting send, double-check the recipient. Autocomplete gets it wrong more often than you'd think <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>Personal devices aren't held to the same security standard as work ones, so be careful what you store on them <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-header">
+        <div class="tip-icon"><i class="fas fa-bullhorn"></i></div>
+        <h3>Speak Up Early</h3>
+      </div>
+      <ul class="tip-list">
+        <li>Noticed something strange? Report it early, even if you're not 100% sure it's actually a problem <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>That could be a suspicious email, an unexpected pop-up, or a device you can't locate <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+        <li>The sooner something gets flagged, the easier it is to contain, so don't wait until you're certain <button class="speak-btn" onclick="speakTip(this)"><i class="fas fa-volume-up"></i></button></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <section class="red-flag-section">
+    <div class="red-flag-card">
+      <div class="red-flag-header">
+        <p class="hero-label">Spot the Red Flag</p>
+        <h2>Can you spot the phishing clues?</h2>
+      </div>
+
+      <div class="email-preview">
+        <p><strong>From:</strong> <span class="flag-item" data-tip="This sender address looks suspicious because it uses a slightly changed domain that is easy to mistake for the real one.">support@paypa1-login.com</span></p>
+        <p><strong>Subject:</strong> <span class="flag-item" data-tip="Urgent wording is a common trick used to make people act before they stop and think.">Urgent action required</span></p>
+        <p class="email-body">Hello, <span class="flag-item" data-tip="This kind of message pushes you to click straight away, which is exactly what attackers want.">Click here immediately</span> to confirm your account details before we lock your access.</p>
+      </div>
+
+      <div class="flag-explanation" id="flagExplanation">
+        Click any highlighted phrase to see why it may be a phishing sign.
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-cta">
+    <p>Worked through the tips? Test yourself and see how much has stuck.</p>
+    <div class="cta-btns">
+      <a href="Cyber Awareness Quiz.html" class="cta-primary">Take the Quiz <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="Learning.html" class="cta-ghost">Back to Learning</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 <span>TrustLine</span>. All rights reserved.</p>
+</footer>
+
+<div id="chat-window">
+  <div id="chat-header">
+    TrustLine Assistant
+    <span onclick="toggleChat()">✕</span>
+  </div>
+  <div id="chat-log"></div>
+  <input id="chat-input" type="text" placeholder="Ask me anything..." onkeydown="handleKey(event)" />
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<script src="js/chat.js"></script>
+<script src="js/main_for_js_folder.js"></script>
+<script src="js/Cyber Awareness.js"></script>
+
+</body>
+</html>

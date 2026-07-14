@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustLine | Cybersecurity for SMEs</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- font awesome for icons - v6.5.0 seems stable -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<canvas id="wave-bg"></canvas>
+<canvas id="corner-flow"></canvas>
+
+<nav>
+  <div class="nav-brand">Trust<span>Line</span></div>
+  <i class="fa-solid fa-bars" id="menu-icon"></i>
+  <div class="nav-links">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Learning.html">Learning</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- hero / landing section -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Understanding Cybersecurity for SMEs</div>
+    <h1>Welcome to TrustLine</h1>
+    <p class="hero-tagline">
+      Learn. Apply. Protect.<br>
+      Built to help SMEs understand what cybersecurity actually involves without needing an IT department or a big budget to get started.
+    </p>
+    <div class="hero-pills">
+      <a href="About.html" class="pill pill-primary">
+        <i class="fa-solid fa-shield-halved"></i> About Us
+      </a>
+      <a href="Learning.html" class="pill pill-ghost">
+        Let's get started!
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--  summary of what the site covers -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">ISO</span>
+    <span class="stat-label">27001 Guidance</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">GRC</span>
+    <span class="stat-label">Fundamentals</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">SME</span>
+    <span class="stat-label">Focused Content</span>
+  </div>
+  <!-- changed this from "100% Practical" - free to use felt more relevant -->
+  <div class="stat-item">
+    <span class="stat-num">100%</span>
+    <span class="stat-label">Free to Use</span>
+  </div>
+</div>
+
+<!-- chat widget]key handling in chat.js -->
+<div id="chat-window">
+  <div id="chat-header">
+    TrustLine Assistant
+    <span onclick="toggleChat()">✕</span>
+  </div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="handleKey(event)">
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<script src="js/chat.js"></script>
+<script src="js/Fade-in wallpaper.js"></script>
+<script src="js/corner-flow.js"></script>
+<script src="js/main_for_js_folder.js"></script>
+
+</body>
+</html>

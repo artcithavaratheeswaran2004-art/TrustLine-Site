@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Tips - TrustLine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/Quick tips.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.76/build/spline-viewer.js"></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">Trust<span>Line</span></div>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Learning.html">Learning</a></li>
+            <li><a href="Policies.html">Policies</a></li>
+            <li><a href="Quick tips.html" class="active">Quick Tips</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="tips-main">
+
+    
+    <div class="tips-left">
+
+        <div class="tips-header">
+            <div class="tips-eyebrow">Quick Tips</div>
+            <h1>Simple Tips to Stay Safe Online</h1>
+            <p>A few simple habits can make a big difference when it comes to staying safe online. These are easy wins, no jargon, just practical advice.</p>
+        </div>
+
+        <ul class="tip-list">
+            <li>
+                <span class="tip-num">1</span>
+                <span class="tip-text">Use a strong and different password for each account.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">2</span>
+                <span class="tip-text">Think carefully before clicking links or downloading attachments from unexpected emails or messages.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">3</span>
+                <span class="tip-text">Turn on multi-factor authentication for extra protection on important accounts.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">4</span>
+                <span class="tip-text">Keep your phone, laptop, browser and apps up to date to reduce security risks.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">5</span>
+                <span class="tip-text">Be careful about what you share online, as personal information can be used in scams.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">6</span>
+                <span class="tip-text">Avoid using public Wi-Fi for sensitive activity unless you are using a secure connection.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">7</span>
+                <span class="tip-text">Lock your screen whenever you leave your device unattended.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+            <li>
+                <span class="tip-num">8</span>
+                <span class="tip-text">Report suspicious emails, pop-ups or account activity as early as possible.</span>
+                <button class="speak-btn" onclick="speakTip(this)">🔊</button>
+            </li>
+        </ul>
+
+    </div>
+
+   
+    <div class="tips-right">
+
+        <div class="spline-box">
+            <spline-viewer url="https://prod.spline.design/OYn17EojDVDtvkex/scene.splinecode"></spline-viewer>
+        </div>
+
+        <div class="password-checker">
+            <h2>🔐 Password Checker</h2>
+            <p class="description">Type a password below and we will tell you how strong it is straight away.</p>
+
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Enter your password" oninput="checkPassword(this.value)" />
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+
+            <div class="strength-meter">
+                <div class="strength-meter-fill" id="strength-meter-fill"></div>
+            </div>
+
+            <div class="strength-text" id="strength-text"></div>
+
+            <div class="requirement" id="req-length">
+                <span class="req-dot"></span>
+                <span>At least 12 characters long</span>
+            </div>
+            <div class="requirement" id="req-upper">
+                <span class="req-dot"></span>
+                <span>At least 1 uppercase letter</span>
+            </div>
+            <div class="requirement" id="req-lower">
+                <span class="req-dot"></span>
+                <span>At least 1 lowercase letter</span>
+            </div>
+            <div class="requirement" id="req-number">
+                <span class="req-dot"></span>
+                <span>At least 1 number</span>
+            </div>
+            <div class="requirement" id="req-special">
+                <span class="req-dot"></span>
+                <span>At least 1 special character (!@#$%^&*)</span>
+            </div>
+        </div>
+
+        <div class="daily-habits">
+            <h2>✅ Daily Security Habits</h2>
+            <p class="description">Tick off the small steps you do today.</p>
+
+            <label class="habit-item">
+                <input type="checkbox" data-habit="mfa">
+                <span>Enable MFA for important accounts</span>
+            </label>
+            <label class="habit-item">
+                <input type="checkbox" data-habit="password">
+                <span>Review one old password</span>
+            </label>
+            <label class="habit-item">
+                <input type="checkbox" data-habit="device">
+                <span>Update one device or app</span>
+            </label>
+            <label class="habit-item">
+                <input type="checkbox" data-habit="backup">
+                <span>Back up one important file</span>
+            </label>
+
+            <div class="habit-progress" id="habit-progress">0 / 4 completed</div>
+            <p class="habit-message" id="habit-message"></p>
+        </div>
+    </div>
+
+</main>
+
+<div id="chat-window">
+    <div id="chat-header">
+        TrustLine Guide
+        <span onclick="toggleChat()">✕</span>
+    </div>
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="handleKey(event)">
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+<footer>
+    <p>© 2026 <span>TrustLine</span>. All rights reserved.</p>
+</footer>
+
+
+<script src="js/chat.js"></script>
+<script src="js/Quick tips.js"></script>
+
+</body>
+</html>

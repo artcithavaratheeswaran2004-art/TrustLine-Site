@@ -1,0 +1,136 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #07090f;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(77, 122, 247, 0.03) 40px,
+    rgba(77, 122, 247, 0.03) 80px
+  );
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  color: #dddddd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 15px 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  border: 3px dashed #4d7af7;
+  padding: 18px 30px;
+  border-radius: 12px;
+  background: rgba(77, 122, 247, 0.05);
+  max-width: 860px;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #4d7af7;
+  text-shadow: 3px 3px 0px #1a2a5e;
+  letter-spacing: 2px;
+  animation: wobble 3s infinite;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-1deg); }
+  50%       { transform: rotate(1deg); }
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #8ab0d8;
+  font-style: italic;
+}
+
+.quiz-card {
+  width: 100%;
+  max-width: 860px;
+  background: #0d1829;
+  border: 2px solid #4d7af7;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 6px 6px 0px #3a63d4;
+}
+
+.quiz-card iframe {
+  width: 100%;
+  min-height: 620px;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: #5a7a8a;
+  text-align: right;
+}
+
+.attribution a {
+  color: #7ba7ff;
+  text-decoration: underline;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: #4d7af7;
+  color: #ffffff;
+  border-color: #3a63d4;
+  box-shadow: 3px 3px 0px #3a63d4;
+}
+
+.btn-primary:hover {
+  background: #7ba7ff;
+  box-shadow: 5px 5px 0px #3a63d4;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #7ba7ff;
+  border: 2px dashed #4d7af7;
+}
+
+.btn-secondary:hover {
+  background: rgba(77, 122, 247, 0.1);
+}

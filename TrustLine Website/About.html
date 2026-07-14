@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About TrustLine</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/About.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="about-bg-glow" aria-hidden="true"></div>
+
+  <nav>
+    <div class="nav-brand">Trust<span>Line</span></div>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html" class="active">About</a></li>
+        <li><a href="Learning.html">Learning</a></li>
+        <li><a href="Cyber Awareness.html">Cyber Awareness</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div class="hero-eyebrow">About TrustLine</div>
+      <h1>Practical security guidance for smaller teams.</h1>
+      <p class="hero-tagline">
+        Covers GRC, ISO 27001 and the day-to-day habits that actually matter. Written for people who aren't security experts.
+      </p>
+    </div>
+  </section>
+
+  <main class="about-main">
+
+    <div class="about-testimonial">
+      <p class="testimonial-quote">
+        "We had no idea where to start with cyber security. TrustLine made it actually make sense."
+      </p>
+      <span class="testimonial-author">~ Angel, Basecamp</span>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <h2>What this is</h2>
+        <p>
+          TrustLine is a GRC awareness tool built as part of a university dissertation. It's aimed at small teams and organisations that don't have dedicated IT or security staff, and covers the kind of security basics that tend to get skipped because existing guidance is too technical or assumes too much.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>Why it was built</h2>
+        <p>
+          Most security frameworks are written with large enterprises in mind. The checklists are long, the terminology is heavy, and very little of it translates to a team of five or ten people just trying to operate safely. This tool tries to fill that gap in a practical way.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>What's covered</h2>
+        <ul class="focus-list">
+          <li>Governance, Risk and Compliance (GRC) basics</li>
+          <li>ISO 27001 explained without the enterprise framing</li>
+          <li>Security controls that are realistic for smaller teams</li>
+          <li>Getting staff to actually take security seriously</li>
+          <li>Day-to-day habits that make a real difference</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h2>A note on scope</h2>
+        <p>
+          TrustLine is not a full compliance audit tool and it won't replace a qualified security consultant if that's what you need. What it will do is give you a clear starting point, help you understand the terminology, and point you toward the right areas to focus on first.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="confidence-check">
+      <h2>How secure do you feel right now?</h2>
+      <p>Pick the one that feels closest to where you are.</p>
+      <div class="confidence-btns">
+        <button onclick="showConfidenceResponse('unsure')">Not sure at all</button>
+        <button onclick="showConfidenceResponse('somewhat')">Somewhat secure</button>
+        <button onclick="showConfidenceResponse('confident')">Pretty confident</button>
+      </div>
+      <div id="confidence-response"></div>
+    </div>
+
+    <div class="about-cta">
+      <button onclick="openPopup()" class="pill pill-primary">Where do I start?</button>
+      <a href="Learning.html" class="pill pill-ghost">Browse the learning hub</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 TrustLine. All rights reserved.</p>
+  </footer>
+
+  <div id="chat-window">
+    <div id="chat-header">
+      TrustLine Assistant
+      <span onclick="toggleChat()">✕</span>
+    </div>
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Ask a question..." onkeydown="handleKey(event)">
+  </div>
+
+  <button id="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+  <script src="js/chat.js"></script>
+  <script src="js/main_for_js_folder.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
